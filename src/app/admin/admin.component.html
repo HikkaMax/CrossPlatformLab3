@@ -1,0 +1,76 @@
+<div>
+    <mat-card>
+      <mat-card-content>
+        <form #f="ngForm" (ngSubmit)="NewGroup(f.value)">
+          <p>Add a Group</p>
+          <p>{{messg}}</p>
+          <mat-form-field floatLabel="never">
+            <input matInput type="number"
+                   placeholder="GroupId"
+                   ngModel name="id" #un="ngModel"
+                   required
+                   (input)="ResetMessg()"
+            >
+            <mat-error *ngIf="un?.errors?.required">id required</mat-error>
+          </mat-form-field>
+          <p>{{messg}}</p>
+          <mat-form-field floatLabel="never">
+            <input matInput type="text"
+                   placeholder="GroupName"
+                   ngModel name="name" #un="ngModel"
+                   required
+                   (input)="ResetMessg()"
+            >
+            <mat-error *ngIf="un?.errors?.required">Name required</mat-error>
+          </mat-form-field>
+          <button mat-raised-button
+                  type="submit"
+                  [disabled]="f.invalid"
+          >Add Group
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div>
+    <mat-card>
+        <mat-card-content>
+          <form #f2="ngForm" (ngSubmit)="NewStudent(f2.value)">
+            <p>Add a Student</p>
+            <p>{{messg}}</p>
+            <mat-form-field floatLabel="never">
+              <input matInput type="number"
+                     placeholder="GroupId"
+                     ngModel name="groupId" #un="ngModel"
+                     required
+                     (input)="ResetMessg()"
+              >
+              <mat-error *ngIf="un?.errors?.required">Student required</mat-error>
+            </mat-form-field>
+            <mat-form-field floatLabel="never">
+              <input matInput type="number"
+                     placeholder="StudentId"
+                     ngModel name="id" #un="ngModel"
+                     required
+                     (input)="ResetMessg()"
+              >
+              <mat-error *ngIf="un?.errors?.required">Student required</mat-error>
+            </mat-form-field>
+            <mat-form-field floatLabel="never">
+              <input matInput type="text"
+                     placeholder="StudentName"
+                     ngModel name="name" #un="ngModel"
+                     required
+                     (input)="ResetMessg()"
+              >
+              <mat-error *ngIf="un?.errors?.required">Student required</mat-error>
+            </mat-form-field>
+            <button mat-raised-button
+                    type="submit"
+                    [disabled]="f.invalid"
+            >Add Student
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+  </div>

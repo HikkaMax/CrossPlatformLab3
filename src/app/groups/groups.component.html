@@ -1,0 +1,14 @@
+<div class="card highlight-card">
+
+<div>
+  <div *ngFor="let group of AllGroupsView">
+    <mat-card [routerLink]="['/about/', group.id]">
+        <mat-card-content>
+        <mat-card-title>{{group.name}}</mat-card-title>
+        <mat-divider></mat-divider>
+        <p>Students:</p><div *ngFor="let student of group.students">{{student.name}}</div>
+        </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+</div>

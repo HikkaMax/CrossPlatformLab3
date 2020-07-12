@@ -1,0 +1,22 @@
+.toolbar {
+    background-color: var(--menuHeader);
+    color: var(--mainText);
+    font-weight: 600;
+    font-size: xx-large;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5em;
+}
+
+.toolbar button {
+    max-height: 100%;
+}
+
+.toolbar img {
+    max-height: 2.6em; 
+}
+
+.welcome {
+    padding-top: 30%;
+}

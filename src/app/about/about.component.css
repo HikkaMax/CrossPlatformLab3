@@ -1,0 +1,39 @@
+mat-card {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+}
+
+
+mat-card-content {
+    margin:10px;
+}
+
+mat-form-field {
+    margin: 20px;
+    height: 30px;
+    background: #95C4D3;
+    color: rgba(33, 37, 54, 1);
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-error {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #788BA2;
+    color:rgba(33, 37, 54, 1);
+    margin-top: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+}
